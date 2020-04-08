@@ -1,1 +1,0 @@
-create table faculty (firstname char (120), lastname char (120), coursename char (120), courselocation char (120));
