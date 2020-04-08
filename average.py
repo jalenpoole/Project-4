@@ -1,8 +1,8 @@
 import argparse
 
 if __name__ == '__main__':
-	parser = argparse.ArgumentParser(description="Code to add two numbers")
-	parser.add_argument('--lst', type=int, nargs='+', help="Second number to add")
+	parser = argparse.ArgumentParser(description="Code to add numbers")
+	parser.add_argument('--lst', type=int, nargs='+', help="add second number")
 	parser.add_argument('--sum', dest='accumulate', action='store_const',
                     const=sum, default=sum,
                     help='sum the integers (default: find the max)')
