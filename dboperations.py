@@ -16,7 +16,7 @@ try:
     cursor.execute(insert_query)
     connection.commit()
 
-    select_Query = "select * from faculty into outfile 'output.csv' FIELDS TERMINATED BY ','  OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' FROM Faculty
+    select_Query = "select * from faculty into outfile 'output.csv' FIELDS TERMINATED BY ','  OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' FROM faculty
     cursor = connection.cursor()
     cursor.execute(select_Query)
     records = cursor.fetchall()
