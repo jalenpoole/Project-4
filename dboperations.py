@@ -8,17 +8,17 @@ try:
                                          password='Jmasterp2198')
     
     
-    mySql_insert_query = """INSERT INTO faculty (firstname, lastname, coursename, courselocation) 
+    insert_query = """INSERT INTO faculty (firstname, lastname, coursename, courselocation) 
                            VALUES 
                            ('Jalen', 'Poole', 'BUS443', 'Nelson Hall') """
 
     cursor = connection.cursor()
-    cursor.execute(mySql_insert_query)
+    cursor.execute(insert_query)
     connection.commit()
 
-    sql_select_Query = "select * from faculty into outfile 'output.csv' FIELDS TERMINATED BY ','  OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' FROM Faculty
+    select_Query = "select * from faculty into outfile 'output.csv' FIELDS TERMINATED BY ','  OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' FROM Faculty
     cursor = connection.cursor()
-    cursor.execute(sql_select_Query)
+    cursor.execute(select_Query)
     records = cursor.fetchall()
     
     
